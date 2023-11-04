@@ -1,26 +1,20 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
-const Menus = () => {
-    const links = ['products', 'about', 'contact', 'blog'];
-    return (
-        <>
-            {
-                links.map(link => <li key={link}>
-                    <Link to={`/${link}`} className="btn btn-sm  btn-ghost">{link}</Link>
-                </li>)
-            }
-        </>
-    )
-}
+import logo from '../../assets/logobook.png';
 const NavBar = () => {
-    const{user, LogOut} = useContext(AuthContext)
+    const links = <>
+        <li> <NavLink to={"/"}> Home </NavLink> </li>
+        <li> <NavLink to={"/allBooks"}> All Books</NavLink> </li>
+        <li> <NavLink to={"/addBooks"}> Add Book</NavLink> </li>
+        <li> <NavLink to={"/borrowedBooks"}> Borrowed Books</NavLink></li>
+    </>
+    const { user, LogOut } = useContext(AuthContext)
     const handleSignOut = () => {
         LogOut()
-          .then(() => console.log('user logged out successfully'))
-          .catch(error => console.log(error))
-      }
+            .then(() => console.log('user logged out successfully'))
+            .catch(error => console.log(error))
+    }
     return (
         <>
             <div className="navbar bg-base-100">
@@ -30,14 +24,16 @@ const NavBar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <Menus />
+                            {links}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost font-bold normal-case text-3xl">GLASSES</Link>
+                    <Link to='/'>
+                        <img className="w-24" src={logo} alt="" />
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <Menus />
+                        {links}
                     </ul>
                 </div>
 

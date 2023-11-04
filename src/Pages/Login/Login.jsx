@@ -1,5 +1,5 @@
 // import { Link, useNavigate } from 'react-router-dom';
-// import SocialLogin from './SocialLogin';
+import SocialLogin from './SocialLogin';
 // import { useContext } from 'react';
 // import { AuthContext } from '../../AuthProvider/AuthProvider';
 
@@ -22,7 +22,7 @@ const Login = () => {
 
     return (
         <>
-            {/* <SocialLogin></SocialLogin> */}
+            <SocialLogin></SocialLogin>
         </>
     );
 };
