@@ -43,7 +43,7 @@ const NavBar = () => {
 
 
     return (
-        <>
+        <div className="2xl:container mx-auto">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -104,7 +104,7 @@ const NavBar = () => {
                     }
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

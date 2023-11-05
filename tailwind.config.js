@@ -8,6 +8,7 @@ export default {
         // Add your custom colors here
         colour: {
           50: '#ff981a',
+          60: '#18342b',
         },
       },
       fontSize: {

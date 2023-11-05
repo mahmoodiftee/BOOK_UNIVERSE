@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/RTDVcbY/1.jpg",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "quantity": 2,
+    "category": "Fiction",
+    "short_description": "A story of wealth, parties, and illusions in 1920s America.",
+    "rating": 4
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/RTDVcbY/2.jpg",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "quantity": 3,
+    "category": "Fiction",
+    "short_description": "A powerful exploration of racism and justice in the American South.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/RTDVcbY/3.jpg",
+    "title": "1984",
+    "author": "George Orwell",
+    "quantity": 4,
+    "category": "Science Fiction",
+    "short_description": "A dystopian classic that explores surveillance and totalitarianism.",
+    "rating": 3
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/RTDVcbY/4.jpg",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "quantity": 1,
+    "category": "Fiction",
+    "short_description": "A coming-of-age story of a young man's alienation and rebellion.",
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/RTDVcbY/5.jpg",
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "quantity": 5,
+    "category": "Non-Fiction",
+    "short_description": "A thought-provoking journey through the history of humankind.",
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/RTDVcbY/6.jpg",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "quantity": 2,
+    "category": "Fantasy",
+    "short_description": "An adventure in Middle-earth with a reluctant hero.",
+    "rating": 4
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/RTDVcbY/7.jpg",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "quantity": 3,
+    "category": "Fiction",
+    "short_description": "A spiritual journey in search of one's destiny.",
+    "rating": 5
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co/RTDVcbY/8.jpg",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "quantity": 4,
+    "category": "Science Fiction",
+    "short_description": "A futuristic world of genetic engineering and social control.",
+    "rating": 3
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co/RTDVcb-Y/9.jpg",
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "quantity": 2,
+    "category": "Fantasy",
+    "short_description": "An epic fantasy quest to destroy the One Ring.",
+    "rating": 4
+  },
+  {
+    "id": 10,
+    "img": "https://i.ibb.co/RTDVcbY/10.jpg",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "quantity": 3,
+    "category": "Fiction",
+    "short_description": "A classic tale of love and social class in 19th-century England.",
+    "rating": 5
+  },
+  {
+    "id": 11,
+    "img": "https://i.ibb.co/RTDVcb-Y/11.jpg",
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "quantity": 4,
+    "category": "Mystery",
+    "short_description": "A thrilling quest for a hidden secret in art and history.",
+    "rating": 4
+  },
+  {
+    "id": 12,
+    "img": "https://i.ibb.co/RTDVcb-Y/12.jpg",
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "quantity": 1,
+    "category": "Dystopian",
+    "short_description": "A father and son's journey in a post-apocalyptic world.",
+    "rating": 3
+  },
+  {
+    "id": 13,
+    "img": "https://i.ibb.co/RTDVcb-Y/13.jpg",
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "quantity": 5,
+    "category": "Science Fiction",
+    "short_description": "A hilarious and absurd journey through space and time.",
+    "rating": 5
+  },
+  {
+    "id": 14,
+    "img": "https://i.ibb.co/RTDVcb-Y/14.jpg",
+    "title": "The Shining",
+    "author": "Stephen King",
+    "quantity": 3,
+    "category": "Horror",
+    "short_description": "A haunted hotel and a writer's descent into madness.",
+    "rating": 4
+  },
+  {
+    "id": 15,
+    "img": "https://i.ibb.co/RTDVcb-Y/15.jpg",
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "quantity": 2,
+    "category": "Mystery",
+    "short_description": "A journalist and a hacker uncover dark family secrets.",
+    "rating": 3
+  },
+  {
+    "id": 16,
+    "img": "https://i.ibb.co/RTDVcb-Y/16.jpg",
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "quantity": 4,
+    "category": "Dystopian",
+    "short_description": "A fight for survival in a dystopian society.",
+    "rating": 4
+  },
+  {
+    "id": 17,
+    "img": "https://i.ibb.co/RTDVcb-Y/17.jpg",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "quantity": 5,
+    "category": "Fantasy",
+    "short_description": "The start of a young wizard's magical journey.",
+    "rating": 5
+  },
+  {
+    "id": 18,
+    "img": "https://i.ibb.co/RTDVcb-Y/18.jpg",
+    "title": "The Road Less Traveled",
+    "author": "M. Scott Peck",
+    "quantity": 3,
+    "category": "Self-Help",
+    "short_description": "A guide to spiritual growth and personal development.",
+    "rating": 5
+  },
+  {
+    "id": 19,
+    "img": "https://i.ibb.co/RTDVcb-Y/19.jpg",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "quantity": 4,
+    "category": "Science Fiction",
+    "short_description": "A desert planet, a hero, and a battle for control.",
+    "rating": 3
+  },
+  {
+    "id": 20,
+    "img": "https://i.ibb.co/RTDVcb-Y/20.jpg",
+    "title": "The Stand",
+    "author": "Stephen King",
+    "quantity": 2,
+    "category": "Horror",
+    "short_description": "A post-apocalyptic world and the struggle for survival.",
+    "rating": 4
+  },
+  {
+    "id": 21,
+    "img": "https://i.ibb.co/RTDVcb-Y/21.jpg",
+    "title": "The Chronicles of Narnia",
+    "author": "C.S. Lewis",
+    "quantity": 5,
+    "category": "Fantasy",
+    "short_description": "A magical world and the adventures of children.",
+    "rating": 5
+  },
+  {
+    "id": 22,
+    "img": "https://i.ibb.co/RTDVcb-Y/22.jpg",
+    "title": "The Road to Serfdom",
+    "author": "Friedrich Hayek",
+    "quantity": 1,
+    "category": "Non-Fiction",
+    "short_description": "A classic work on economics and individual liberty.",
+    "rating": 4
+  },
+  {
+    "id": 23,
+    "img": "https://i.ibb.co/RTDVcb-Y/23.jpg",
+    "title": "Gone with the Wind",
+    "author": "Margaret Mitchell",
+    "quantity": 3,
+    "category": "Historical Fiction",
+    "short_description": "A sweeping epic set during the American Civil War.",
+    "rating": 3
+  },
+  {
+    "id": 24,
+    "img": "https://i.ibb.co/RTDVcb-Y/24.jpg",
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "quantity": 4,
+    "category": "Science",
+    "short_description": "An exploration of the universe and black holes.",
+    "rating": 4
+  },
+  {
+    "id": 25,
+    "img": "https://i.ibb.co/RTDVcb-Y/25.jpg",
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "quantity": 2,
+    "category": "Fantasy",
+    "short_description": "A young musician's journey to become a legendary hero.",
+    "rating": 5
+  },
+  {
+    "id": 26,
+    "img": "https://i.ibb.co/RTDVcb-Y/26.jpg",
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "quantity": 5,
+    "category": "Classic",
+    "short_description": "The psychological turmoil of a tormented student.",
+    "rating": 3
+  },
+  {
+    "id": 27,
+    "img": "https://i.ibb.co/RTDVcb-Y/27.jpg",
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "quantity": 3,
+    "category": "Mystery",
+    "short_description": "A psychotherapist unravels the mystery of a silent patient.",
+    "rating": 4
+  },
+  {
+    "id": 28,
+    "img": "https://i.ibb.co/RTDVcb-Y/28.jpg",
+    "title": "The Power of Habit",
+    "author": "Charles Duhigg",
+    "quantity": 2,
+    "category": "Non-Fiction",
+    "short_description": "How habits shape our lives and how to change them.",
+    "rating": 5
+  },
+  {
+    "id": 29,
+    "img": "https://i.ibb.co/RTDVcb-Y/29.jpg",
+    "title": "The Road Not Taken",
+    "author": "Robert Frost",
+    "quantity": 4,
+    "category": "Poetry",
+    "short_description": "A collection of timeless and introspective poems.",
+    "rating": 4
+  },
+  {
+    "id": 30,
+    "img": "https://i.ibb.co/RTDVcb-Y/30.jpg",
+    "title": "The Wind in the Willows",
+    "author": "Kenneth Grahame",
+    "quantity": 3,
+    "category": "Children's Literature",
+    "short_description": "A whimsical tale of animals and their adventures.",
+    "rating": 3
+  },
+  {
+    "id": 31,
+    "img": "https://i.ibb.co/RTDVcb-Y/31.jpg",
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "quantity": 5,
+    "category": "Children's Literature",
+    "short_description": "A girl's journey of discovery and healing in a hidden garden.",
+    "rating": 5
+  },
+  {
+    "id": 32,
+    "img": "https://i.ibb.co/RTDVcb-Y/32.jpg",
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "quantity": 4,
+    "category": "Classic",
+    "short_description": "The epic tale of Captain Ahab's relentless pursuit of the white whale.",
+    "rating": 5
+  },
+  {
+    "id": 33,
+    "img": "https://i.ibb.co/RTDVcb-Y/33.jpg",
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "quantity": 3,
+    "category": "Historical Fiction",
+    "short_description": "The Joad family's journey during the Great Depression.",
+    "rating": 4
+  },
+  {
+    "id": 34,
+    "img": "https://i.ibb.co/RTDVcb-Y/34.jpg",
+    "title": "The Odyssey",
+    "author": "Homer",
+    "quantity": 2,
+    "category": "Epic Poetry",
+    "short_description": "The adventures of Odysseus on his way home from the Trojan War.",
+    "rating": 5
+  },
+  {
+    "id": 35,
+    "img": "https://i.ibb.co/RTDVcb-Y/35.jpg",
+    "title": "The Art of War",
+    "author": "Sun Tzu",
+    "quantity": 5,
+    "category": "Military Strategy",
+    "short_description": "Ancient wisdom on strategy and warfare.",
+    "rating": 4
+  },
+  {
+    "id": 36,
+    "img": "https://i.ibb.co/RTDVcb-Y/36.jpg",
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "quantity": 4,
+    "category": "Children's Literature",
+    "short_description": "A tale of a young prince's interstellar journey and life lessons.",
+    "rating": 5
+  },
+  {
+    "id": 37,
+    "img": "https://i.ibb.co/RTDVcb-Y/37.jpg",
+    "title": "The Road to Wigan Pier",
+    "author": "George Orwell",
+    "quantity": 2,
+    "category": "Non-Fiction",
+    "short_description": "An investigation of industrial poverty and social conditions in England.",
+    "rating": 3
+  },
+  {
+    "id": 38,
+    "img": "https://i.ibb.co/RTDVcb-Y/38.jpg",
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "quantity": 3,
+    "category": "Adventure",
+    "short_description": "A tale of betrayal, revenge, and redemption.",
+    "rating": 5
+  },
+  {
+    "id": 39,
+    "img": "https://i.ibb.co/RTDVcb-Y/39.jpg",
+    "title": "The Metamorphosis",
+    "author": "Franz Kafka",
+    "quantity": 2,
+    "category": "Absurdist Fiction",
+    "short_description": "The bizarre transformation of Gregor Samsa into an insect.",
+    "rating": 4
+  },
+  {
+    "id": 40,
+    "img": "https://i.ibb.co/RTDVcb-Y/40.jpg",
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "quantity": 4,
+    "category": "Historical Fiction",
+    "short_description": "The lives of five aristocratic families during the Napoleonic era.",
+    "rating": 5
+  },
+  {
+    "id": 41,
+    "img": "https://i.ibb.co/RTDVcb-Y/41.jpg",
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "quantity": 3,
+    "category": "Gothic Fiction",
+    "short_description": "A man's portrait ages while he remains forever young and corrupt.",
+    "rating": 4
+  },
+  {
+    "id": 42,
+    "img": "https://i.ibb.co/RTDVcb-Y/42.jpg",
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "quantity": 5,
+    "category": "Gothic Fiction",
+    "short_description": "A scientist's creation of a grotesque, intelligent being.",
+    "rating": 5
+  },
+  {
+    "id": 43,
+    "img": "https://i.ibb.co/RTDVcb-Y/43.jpg",
+    "title": "The Time Machine",
+    "author": "H.G. Wells",
+    "quantity": 3,
+    "category": "Science Fiction",
+    "short_description": "A time traveler's journey to the distant future.",
+    "rating": 3
+  },
+  {
+    "id": 44,
+    "img": "https://i.ibb.co/RTDVcb-Y/44.jpg",
+    "title": "The Giver",
+    "author": "Lois Lowry",
+    "quantity": 4,
+    "category": "Dystopian",
+    "short_description": "A young boy discovers the dark truth behind his seemingly perfect world.",
+    "rating": 4
+  },
+  {
+    "id": 45,
+    "img": "https://i.ibb.co/RTDVcb-Y/45.jpg",
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "quantity": 5,
+    "category": "Science Fiction",
+    "short_description": "An astronaut's struggle for survival on the Red Planet.",
+    "rating": 4
+  },
+  {
+    "id": 46,
+    "img": "https://i.ibb.co/RTDVcb-Y/46.jpg",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "quantity": 2,
+    "category": "Fiction",
+    "short_description": "A coming-of-age story of a young man's alienation and rebellion.",
+    "rating": 4
+  },
+  {
+    "id": 47,
+    "img": "https://i.ibb.co/RTDVcb-Y/47.jpg",
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "quantity": 3,
+    "category": "Children's Literature",
+    "short_description": "A girl's journey of discovery and healing in a hidden garden.",
+    "rating": 5
+  },
+  {
+    "id": 48,
+    "img": "https://i.ibb.co/RTDVcb-Y/48.jpg",
+    "title": "The Road Less Traveled",
+    "author": "M. Scott Peck",
+    "quantity": 2,
+    "category": "Self-Help",
+    "short_description": "A guide to spiritual growth and personal development.",
+    "rating": 5
+  },
+  {
+    "id": 49,
+    "img": "https://i.ibb.co/RTDVcb-Y/49.jpg",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "quantity": 4,
+    "category": "Science Fiction",
+    "short_description": "A desert planet, a hero, and a battle for control.",
+    "rating": 3
+  },
+  {
+    "id": 50,
+    "img": "https://i.ibb.co/RTDVcb-Y/50.jpg",
+    "title": "The Stand",
+    "author": "Stephen King",
+    "quantity": 1,
+    "category": "Horror",
+    "short_description": "A post-apocalyptic world and the struggle for survival.",
+    "rating": 4
+  }
+]
