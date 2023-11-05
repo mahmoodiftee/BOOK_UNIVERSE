@@ -3,10 +3,21 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Add your custom colors here
+        colour: {
+          50: '#ff981a',
+        },
+      },
+      fontSize: {
+        'h1': '2rem',
+        'p': '1rem',
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "business"],
+    themes: ["light", "forest"],
   },
 };
