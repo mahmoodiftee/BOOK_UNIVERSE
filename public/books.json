@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "img": "https://i.ibb.co/RTDVcb-Y/1.jpg",
+    "img": "https://i.ibb.co/bsZ1fMQ/1.jpg",
     "title": "The Night Circus",
     "author": "Erin Morgenstern",
     "quantity": 3,
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "img": "https://i.ibb.co/RTDVcb-Y/2.jpg",
+    "img": "https://i.ibb.co/SRVj0wR/2.jpg",
     "title": "Gone Girl",
     "author": "Gillian Flynn",
     "quantity": 4,
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "img": "https://i.ibb.co/RTDVcb-Y/3.jpg",
+    "img": "https://i.ibb.co/C6HpKqx/3.jpg",
     "title": "The Shining",
     "author": "Stephen King",
     "quantity": 5,
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "img": "https://i.ibb.co/RTDVcb-Y/4.jpg",
+    "img": "https://i.ibb.co/qps435j/4.jpg",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "quantity": 6,
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "img": "https://i.ibb.co/RTDVcb-Y/5.jpg",
+    "img": "https://i.ibb.co/DDNyh4N/5.jpg",
     "title": "The Name of the Wind",
     "author": "Patrick Rothfuss",
     "quantity": 3,
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "img": "https://i.ibb.co/RTDVcb-Y/6.jpg",
+    "img": "https://i.ibb.co/2kncfNS/6.jpg",
     "title": "The Girl with the Dragon Tattoo",
     "author": "Stieg Larsson",
     "quantity": 4,
@@ -61,7 +61,7 @@
   },
   {
     "id": 7,
-    "img": "https://i.ibb.co/RTDVcb-Y/7.jpg",
+    "img": "https://i.ibb.co/JpG0nbg/7.jpg",
     "title": "It",
     "author": "Stephen King",
     "quantity": 2,
@@ -71,7 +71,7 @@
   },
   {
     "id": 8,
-    "img": "https://i.ibb.co/RTDVcb-Y/8.jpg",
+    "img": "https://i.ibb.co/h1Hx7mF/8.jpg",
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "quantity": 3,
@@ -81,7 +81,7 @@
   },
   {
     "id": 9,
-    "img": "https://i.ibb.co/RTDVcb-Y/9.jpg",
+    "img": "https://i.ibb.co/0KVH721/9.jpg",
     "title": "The Lord of the Rings",
     "author": "J.R.R. Tolkien",
     "quantity": 2,
@@ -91,7 +91,7 @@
   },
   {
     "id": 10,
-    "img": "https://i.ibb.co/RTDVcb-Y/10.jpg",
+    "img": "https://i.ibb.co/mBmx13W/10.jpg",
     "title": "Harry Potter and the Sorcerer's Stone",
     "author": "J.K. Rowling",
     "quantity": 4,
@@ -101,7 +101,7 @@
   },
   {
     "id": 11,
-    "img": "https://i.ibb.co/RTDVcb-Y/11.jpg",
+    "img": "https://i.ibb.co/5vKQ0kn/11.jpg",
     "title": "The Da Vinci Code",
     "author": "Dan Brown",
     "quantity": 3,
@@ -111,7 +111,7 @@
   },
   {
     "id": 12,
-    "img": "https://i.ibb.co/RTDVcb-Y/12.jpg",
+    "img": "https://i.ibb.co/FVVPg1C/12.jpg",
     "title": "The Haunting of Hill House",
     "author": "Shirley Jackson",
     "quantity": 5,
@@ -121,7 +121,7 @@
   },
   {
     "id": 13,
-    "img": "https://i.ibb.co/RTDVcb-Y/13.jpg",
+    "img": "https://i.ibb.co/6XC7Hs4/13.jpg",
     "title": "1984",
     "author": "George Orwell",
     "quantity": 3,
@@ -131,7 +131,7 @@
   },
   {
     "id": 14,
-    "img": "https://i.ibb.co/RTDVcb-Y/14.jpg",
+    "img": "https://i.ibb.co/cTDwMkN/14.jpg",
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "quantity": 4,
@@ -141,7 +141,7 @@
   },
   {
     "id": 15,
-    "img": "https://i.ibb.co/RTDVcbY/10.jpg",
+    "img": "https://i.ibb.co/R7VvWjS/15.jpg",
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "quantity": 3,
@@ -151,11 +151,11 @@
   },
   {
     "id": 16,
-    "img": "https://i.ibb.co/RTDVcb-Y/12.jpg",
+    "img": "https://i.ibb.co/ScctqCF/16.jpg",
     "title": "The Road",
     "author": "Cormac McCarthy",
     "quantity": 1,
-    "category": "Dystopian",
+    "category": "Mystery",
     "short_description": "A father and son's journey in a post-apocalyptic world.",
     "rating": 3
   }

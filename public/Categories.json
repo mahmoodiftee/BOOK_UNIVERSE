@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/RDY81s8/fantasy.jpg",
+    "category": "Fiction"
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/G2b0dyh/fiction-jpg.jpg",
+    "category": "Fantasy"
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/QrnKSVS/Horror.jpg",
+    "category": "Horror"
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/PzPkXht/mystery.png",
+    "category": "Mystery"
+  }
+]

@@ -1,21 +1,27 @@
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logobook.png';
 
 const Footer = () => {
   return (
     <div className="bg-base-200">
       <footer className="footer 2xl:container mx-auto p-10 text-base-content">
+        <aside className='lg:ml-32'>
+          <Link to='/'>
+            <img className="w-24" src={logo} alt="" />
+          </Link>
+          <p>BOOK UNIVERSE</p>
+        </aside>
         <nav>
-          <header className="footer-title">Services</header>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <header className="footer-title">FACILITIES</header>
+          <a className="link link-hover">E-BOOK</a>
+          <a className="link link-hover">BORROW</a>
+          <a className="link link-hover">ADD BOOK</a>
         </nav>
         <nav>
-          <header className="footer-title">Company</header>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <header className="footer-title">COMPANY</header>
+          <a className="link link-hover">ABOUT US</a>
+          <a className="link link-hover">CONTACT</a>
+          <a className="link link-hover">HOME</a>
         </nav>
         <div>
           <form>
