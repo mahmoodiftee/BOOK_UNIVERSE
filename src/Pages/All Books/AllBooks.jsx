@@ -31,7 +31,7 @@ const AllBooks = () => {
                   value={book.rating}
                   readOnly
                 /></span>
-                <Link to={`/details/${book._id}`}>
+                <Link to={`/update/${book._id}`}>
                   <button className="btn btn-sm btn-neutral rounded-none my-2">Update</button>
                 </Link>
               </div>

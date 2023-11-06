@@ -15,6 +15,7 @@ import AllBooks from "./Pages/All Books/AllBooks";
 import '@smastrom/react-rating/style.css'
 import Detail from "./Pages/Details/Detail";
 import CategoryBooks from "./Pages/CategoryBooks/CategoryBooks";
+import Update from "./Pages/Update/Update";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
         loader: ({ params }) => {
           return fetch(`http://localhost:5000/books/?category=${params.category}`);
         }
-      },
+      }, 
       {
         path: "/update/:id",
         element: <Update></Update>,

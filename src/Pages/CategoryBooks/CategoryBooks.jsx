@@ -25,7 +25,7 @@ const CategoryBooks = () => {
                     value={book.rating}
                     readOnly
                   /></span>
-                  <Link to={`/update/${book._id}`}>
+                  <Link to={`/details/${book._id}`}>
                     <button className="btn btn-sm btn-neutral rounded-none my-2">Details</button>
                   </Link>
                 </div>

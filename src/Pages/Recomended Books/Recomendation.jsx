@@ -22,7 +22,6 @@ const Recommendation = () => {
         console.error(error);
       });
   }, []);
-  console.log(books);
 
   return (
     <div className="mb-16 lg:mb-20">
@@ -44,17 +43,17 @@ const Recommendation = () => {
           >
             {books.map(book => (
               <SwiperSlide key={book._id} className=''>
-                <div className='h-[100px] lg:h-[380px] overflow-hidden'> {/* Set a fixed height (e.g., 48px) and hide overflow */}
+                <div className='h-[100px] lg:h-[380px] overflow-hidden'>
                   <img className='h-full w-full object-cover' src={book.img} alt={book.title} />
                 </div>
                 <div className='pl-1 hidden lg:block'>
                   <h1 className='text-[15px] font-semibold'>{book.title}</h1>
                   <p className='text-[13px]'>Author:&nbsp;{book.author}</p>
-                  <p className="flex text-[13px]">Rating:&nbsp;<Rating
+                  <div className="flex text-[13px]">Rating:&nbsp;<Rating
                     style={{ maxWidth: 70 }}
                     value={book.rating}
                     readOnly
-                  /></p>
+                  /></div>
                   <Link to={`/${book._id}`}>
                     <button className="btn btn-sm btn-neutral rounded-none my-2">Read</button>
                   </Link>
