@@ -7,6 +7,7 @@ import { Autoplay, FreeMode } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Rating } from '@smastrom/react-rating';
 const Recommendation = () => {
   const [books, setBooks] = useState([]);
   const serverUrl = 'http://localhost:5000/recommendation';
@@ -49,7 +50,11 @@ const Recommendation = () => {
                 <div className='pl-1 hidden lg:block'>
                   <h1 className='text-[15px] font-semibold'>{book.title}</h1>
                   <p className='text-[13px]'>Author:&nbsp;{book.author}</p>
-                  <p className='text-[13px]'>Rating:&nbsp;{book.rating}</p>
+                  <p className="flex text-[13px]">Rating:&nbsp;<Rating
+                    style={{ maxWidth: 70 }}
+                    value={book.rating}
+                    readOnly
+                  /></p>
                   <Link to={`/${book._id}`}>
                     <button className="btn btn-sm btn-neutral rounded-none my-2">Read</button>
                   </Link>
@@ -79,7 +84,11 @@ const Recommendation = () => {
                 <div className='pl-1 mt-2 hidden lg:block'>
                   <h1 className='text-[15px] font-semibold'>{book.title}</h1>
                   <p className='text-[13px]'>Author:&nbsp;{book.author}</p>
-                  <p className='text-[13px]'>Rating:&nbsp;{book.rating}</p>
+                  <p className="flex text-[13px]">Rating:&nbsp;<Rating
+                    style={{ maxWidth: 70 }}
+                    value={book.rating}
+                    readOnly
+                  /></p>
                   <Link to={`/${book._id}`}>
                     <button className="btn btn-sm btn-neutral rounded-none my-2">Read</button>
                   </Link>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { Rating } from '@smastrom/react-rating';
 const AllBooks = () => {
   const [Books, SetBooks] = useState([]);
   useEffect(() => {
@@ -26,8 +26,12 @@ const AllBooks = () => {
                 <h1 className='text-[14px] lg:text-[16px] font-semibold'>{book.title}</h1>
                 <p className='text-[10px] lg:text-[14px]'>Category:&nbsp;{book.category}</p>
                 <p className='text-[10px] lg:text-[14px]'>Author:&nbsp;{book.author}</p>
-                <p className='text-[10px] lg:text-[14px]'>Rating:&nbsp;{book.rating}</p>
-                <Link to={`/${book._id}`}>
+                <span className="flex text-[10px] lg:text-[14px]">Rating:&nbsp;<Rating
+                  style={{ maxWidth: 70 }}
+                  value={book.rating}
+                  readOnly
+                /></span>
+                <Link to={`/details/${book._id}`}>
                   <button className="btn btn-sm btn-neutral rounded-none my-2">Update</button>
                 </Link>
               </div>

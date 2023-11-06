@@ -12,6 +12,9 @@ import AuthProvider from "./AuthProvider/AuthProvider";
 import Root from "./Root/Root";
 import AddBook from "./Pages/Add Book/AddBook";
 import AllBooks from "./Pages/All Books/AllBooks";
+import '@smastrom/react-rating/style.css'
+import Detail from "./Pages/Details/Detail";
+import CategoryBooks from "./Pages/CategoryBooks/CategoryBooks";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,11 +34,28 @@ const router = createBrowserRouter([
       },
       {
         path: '/allBooks',
-        element: <AllBooks/>
+        element: <AllBooks />
       },
       {
         path: '/addbook',
-        element: <AddBook/>
+        element: <AddBook />
+      },
+      {
+        path: "/details/:id",
+        element: <Detail></Detail>,
+        loader: ({ params }) => fetch(`http://localhost:5000/books/${params.id}`)
+      },
+      {
+        path: '/categoryWiseBooks/:category',
+        element: <CategoryBooks></CategoryBooks>,
+        loader: ({ params }) => {
+          return fetch(`http://localhost:5000/books/?category=${params.category}`);
+        }
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        loader: ({ params }) => fetch(`http://localhost:5000/books/${params.id}`)
       },
 
     ]

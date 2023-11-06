@@ -16,12 +16,12 @@ const FeaturedCategories = () => {
       <p className='text-lg lg:text-2xl uppercase text-center mb-12'>Featured Categories</p>
       <div className="grid lg:max-w-screen-xl mx-auto grid-cols-2 lg:grid-cols-4 items-center gap-4 lg:gap-16">
         {categories.map(category => (
-          <div key={category.id} className="lg:w-72 mx-auto bg-base-200 p-2 rounded-lg shadow-xl">
+          <Link to={`/categoryWiseBooks/${category.category}`} key={category.id} className="btnn lg:w-72 mx-auto bg-base-200 p-2 rounded-lg shadow-xl">
             <div className="">
               <img className='rounded-lg' src={category.img} alt="Shoes" />
               <h2 className="text-lg my-2 font-bold text-center">{category.category}</h2>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <Link to={'/categories'} className="mt-1 text-colour-50 hover:text-colour-60 flex justify-end items-center mr-10">See More <HiArrowSmRight></HiArrowSmRight></Link>
