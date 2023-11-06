@@ -10,6 +10,8 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
 import AuthProvider from "./AuthProvider/AuthProvider";
 import Root from "./Root/Root";
+import AddBook from "./Pages/Add Book/AddBook";
+import AllBooks from "./Pages/All Books/AllBooks";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,12 +22,20 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'login',
+        path: '/login',
         element: <Login />
       },
       {
-        path: 'register',
+        path: '/register',
         element: <Register />
+      },
+      {
+        path: '/allBooks',
+        element: <AllBooks/>
+      },
+      {
+        path: '/addbook',
+        element: <AddBook/>
       },
 
     ]

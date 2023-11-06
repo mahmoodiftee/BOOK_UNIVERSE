@@ -12,7 +12,7 @@ const FeaturedCategories = () => {
   }, []);
 
   return (
-    <div className="mb-12 lg:-mt-20">
+    <div className="mb-12 lg:-mt-16">
       <p className='text-lg lg:text-2xl uppercase text-center mb-12'>Featured Categories</p>
       <div className="grid lg:max-w-screen-xl mx-auto grid-cols-2 lg:grid-cols-4 items-center gap-4 lg:gap-16">
         {categories.map(category => (

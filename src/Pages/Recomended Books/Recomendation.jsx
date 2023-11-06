@@ -25,7 +25,7 @@ const Recommendation = () => {
 
   return (
     <div className="mb-16 lg:mb-20">
-      <p className='text-lg lg:text-2xl uppercase text-center mb-8 lg:mb-12'>Recomended For You</p>
+      <p className='text-lg lg:text-2xl uppercase text-center mb-8 lg:mb-12'>Recomended Books</p>
 
       <div className='mx-auto' >
         <div className='hidden lg:block'>
@@ -76,7 +76,7 @@ const Recommendation = () => {
                 <div className='h-[170px] lg:h-[350px] overflow-hidden'> {/* Set a fixed height (e.g., 48px) and hide overflow */}
                   <img className='h-full w-full object-cover' src={book.img} alt={book.title} />
                 </div>
-                <div className='pl-1 hidden lg:block'>
+                <div className='pl-1 mt-2 hidden lg:block'>
                   <h1 className='text-[15px] font-semibold'>{book.title}</h1>
                   <p className='text-[13px]'>Author:&nbsp;{book.author}</p>
                   <p className='text-[13px]'>Rating:&nbsp;{book.rating}</p>
