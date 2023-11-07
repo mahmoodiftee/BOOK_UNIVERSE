@@ -54,7 +54,7 @@ const Recommendation = () => {
                     value={book.rating}
                     readOnly
                   /></div>
-                  <Link to={`/${book._id}`}>
+                  <Link to={`/details/${book._id}`}>
                     <button className="btn btn-sm btn-neutral rounded-none my-2">Read</button>
                   </Link>
                 </div>

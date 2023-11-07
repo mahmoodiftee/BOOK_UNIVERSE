@@ -1,11 +1,23 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import json from '../../assets/json/banner.json';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Hero = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className='flex lg:-mt-8 flex-col justify-center md:flex-row lg:flex-row mt-10'>
       <div className='flex flex-col items-center lg:justify-center'>
         <p className='text-center mx-auto font-bold uppercase text-xl md:text-5xl'>Dive in to the world of <span className='text-colour-50 '>READING</span> with us</p>
-        <button className="btn text-[10px] lg:text-sm rounded-3xl btn-sm my-2 lg:my-4 lg:btn-md btn-neutral">LET'S START</button>
+        {user ? (
+          <Link to="/allBooks">
+            <button className="btn text-[10px] lg:text-sm rounded-3xl btn-sm my-2 lg:my-4 lg:btn-md btn-neutral">LET'S START</button>
+          </Link>
+        ) : (
+          <Link to="/login">
+            <button className="btn text-[10px] lg:text-sm rounded-3xl btn-sm my-2 lg:my-4 lg:btn-md btn-neutral">LET'S START</button>
+          </Link>
+        )}
       </div>
       <div className='flex justify-center lg:justify-end'>
         <Player

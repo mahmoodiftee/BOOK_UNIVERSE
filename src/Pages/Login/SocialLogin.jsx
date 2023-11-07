@@ -26,11 +26,10 @@ const SocialLogin = () => {
     };
 
     return (
-        <div className="h-screen">
-            <div className="divider text-white">continue with</div>
+        <div className="">
+            <div className="divider font-bold">continue with</div>
             <div className="flex gap-6 justify-center items-center">
                 <FcGoogle className="text-[41px] cursor-pointer" onClick={() => handleLogin(googleLogin)}></FcGoogle>
-                <FaGithub className="text-4xl cursor-pointer text-white" onClick={() => handleLogin(githubLogin)} ></FaGithub>
             </div>
         </div>
     );

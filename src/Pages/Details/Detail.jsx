@@ -8,11 +8,17 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating';
 import { LiaPeopleCarrySolid } from 'react-icons/lia';
 import { GiRead } from 'react-icons/gi';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
+import Modal from './Modal';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Detail = () => {
+  const Book = useLoaderData();
+  const { user } = useContext(AuthContext);
   const [SuggestedBook, setSuggestedBook] = useState([]);
+  const [borrowedBooks, setBorrowedBooks] = useState([]);
   useEffect(() => {
     axios.get('http://localhost:5000/books')
       .then((response) => {
@@ -26,7 +32,105 @@ const Detail = () => {
       });
   }, []);
 
-  const Book = useLoaderData();
+  useEffect(() => {
+    if (user) {
+      axios.get(`http://localhost:5000/borrowedBooks?email=${user.email}`)
+        .then((response) => {
+          const data = response.data;
+          setBorrowedBooks(data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+  }, [user]);
+
+  const handleBorrow = (e) => {
+    e.preventDefault();
+    if (Book.quantity <= 0) {
+      return;
+    }
+
+    const hasBorrowed = borrowedBooks.some((borrowedBook) => borrowedBook.title === Book.title);
+
+    if (hasBorrowed) {
+      const modal = document.getElementById('my_modal_3');
+      modal.close();
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'You have already borrowed this book.',
+      });
+    } else {
+      const title = e.target.title.value;
+      const category = e.target.category.value;
+      const borrower = e.target.borrower.value;
+      const borrowerEmail = e.target.borrowerEmail.value;
+      const BorrowDate = e.target.bDate.value;
+      const ReturnDate = e.target.rDate.value;
+      console.log(title, category, borrower, borrowerEmail, BorrowDate, ReturnDate);
+      const borrowInfo = {
+        title: title,
+        img: Book?.img || '',
+        category: Book?.category || '',
+        name: user?.displayName || '',
+        email: user?.email || '',
+        borrow_date: BorrowDate || '',
+        return_date: ReturnDate || '',
+      }
+
+      axios.post('http://localhost:5000/borrowedBooks', borrowInfo, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((response) => {
+          if (response.data.insertedId) {
+            const updatedQuantity = Book.quantity - 1; // Calculate the updated quantity
+            axios
+              .patch(`http://localhost:5000/books/${Book._id}`, {
+                quantity: updatedQuantity, // Update the quantity
+              })
+              .then((updateResponse) => {
+                if (updateResponse.status === 200) {
+                  // Update the borrowedBooks state with the new borrowed book
+                  setBorrowedBooks([...borrowedBooks, borrowInfo]);
+                  // Update the quantity in the Book object
+                  Book.quantity = updatedQuantity;
+
+                  Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Successfully Borrowed',
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+
+                  const modal = document.getElementById('my_modal_3');
+                  modal.close();
+                  e.target.reset();
+                }
+              })
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'Failed to borrow the book. Please try again.',
+            });
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'An error occurred. Please try again later.',
+          });
+        });
+    }
+  }
+
+
   return (
     <div>
       <div className="hero mb-10 mt-10">
@@ -35,7 +139,7 @@ const Detail = () => {
             <img src={Book.img} className="w-full h-full object-cover" />
           </div>
           <div className="flex-grow gap-4">
-            <p className="text-4xl mb-4 text-colour-50 font-bold">{Book.title}</p>
+            <p className="text-xl lg:text-4xl mb-2 lg:mb-4 text-colour-50 font-bold">{Book.title}</p>
             <p className="text-lg font-semibold">Author:&nbsp;{Book.author}</p>
             <p className="text-lg font-semibold">Category:&nbsp;{Book.category}</p>
             <span className="flex text-lg font-semibold">Rating:&nbsp;<Rating
@@ -43,18 +147,26 @@ const Detail = () => {
               value={Book.rating}
               readOnly
             /></span>
+            <p className="text-lg max-w-[650px] font-semibold">Quantity:&nbsp;{Book.quantity}</p>
             <p className="text-lg max-w-[650px] font-semibold mb-4">Details:&nbsp;{Book.short_description}</p>
 
             <div className="flex flex-col md:flex-row justify-start gap-4">
               <button
-                onClick={() => handleAddBook(_id)}
-                className="btn rounded-none btn-neutral lg:btn-wide flex justify-center items-center gap-2">
+                onClick={() => {
+                  if (Book.quantity > 0) {
+                    document.getElementById('my_modal_3').showModal();
+                  }
+                }}
+                className={`btn rounded-none btn-neutral lg:btn-wide flex justify-center items-center gap-2 ${Book.quantity <= 0 ? 'btn-disabled' : ''
+                  }`}
+                disabled={Book.quantity <= 0}
+              >
                 <LiaPeopleCarrySolid className="h-6 w-6"></LiaPeopleCarrySolid>
                 Borrow
               </button>
-
+              {user && <Modal handleBorrow={handleBorrow} Book={Book} user={user}></Modal>}
               <button
-                onClick={() => handleDelete(_id)}
+                onClick={() => handleRead(Book._id)}
                 className="btn rounded-none btn-neutral lg:btn-wide flex justify-center items-center gap-2">
                 <GiRead className="h-6 w-6"></GiRead>
                 Read
