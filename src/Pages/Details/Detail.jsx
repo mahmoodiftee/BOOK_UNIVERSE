@@ -164,7 +164,7 @@ const Detail = () => {
                 Borrow
               </button>
               {user && <Modal handleBorrow={handleBorrow} Book={Book} user={user}></Modal>}
-              <Link
+              <Link to={`/pdf/${Book._id}`}
                 onClick={() => handleRead(Book._id)}
                 className="btn rounded-none btn-neutral lg:btn-wide flex justify-center items-center gap-2">
                 <GiRead className="h-6 w-6"></GiRead>

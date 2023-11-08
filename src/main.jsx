@@ -19,6 +19,7 @@ import Update from "./Pages/Update/Update";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Error from "./Pages/Error/Error";
 import BorrowedBooks from "./Pages/BorrowedBooks/BorrowedBooks";
+import PDF from "./Pages/Details/PDF/PDF";
 // import PDF from "./Pages/Details/PDF/PDF";
 const router = createBrowserRouter([
   {
@@ -34,11 +35,11 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />
       },
-      // {
-      //   path: '/pdf/:id',
-      //   element: <PDF></PDF>,
-      //   loader: ({ params }) => fetch(`https://library-management-system-server-khaki.vercel.app/books/${params.id}`)
-      // },
+      {
+        path: '/pdf/:id',
+        element: <PDF></PDF>,
+        loader: ({ params }) => fetch(`https://library-management-system-server-khaki.vercel.app/books/${params.id}`)
+      },
       {
         path: '/register',
         element: <Register />
