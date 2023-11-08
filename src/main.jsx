@@ -19,6 +19,7 @@ import Update from "./Pages/Update/Update";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Error from "./Pages/Error/Error";
 import BorrowedBooks from "./Pages/BorrowedBooks/BorrowedBooks";
+// import PDF from "./Pages/Details/PDF/PDF";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />
       },
+      // {
+      //   path: '/pdf/:id',
+      //   element: <PDF></PDF>,
+      //   loader: ({ params }) => fetch(`https://library-management-system-server-khaki.vercel.app/books/${params.id}`)
+      // },
       {
         path: '/register',
         element: <Register />
@@ -52,19 +58,19 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <PrivateRoute><Detail></Detail></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/books/${params.id}`)
+        loader: ({ params }) => fetch(`https://library-management-system-server-khaki.vercel.app/books/${params.id}`)
       },
       {
         path: '/categoryWiseBooks/:category',
         element: <PrivateRoute><CategoryBooks></CategoryBooks></PrivateRoute>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/books/?category=${params.category}`);
+          return fetch(`https://library-management-system-server-khaki.vercel.app/books/?category=${params.category}`);
         }
       },
       {
         path: "/update/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/books/${params.id}`)
+        loader: ({ params }) => fetch(`https://library-management-system-server-khaki.vercel.app/books/${params.id}`)
       },
 
     ]

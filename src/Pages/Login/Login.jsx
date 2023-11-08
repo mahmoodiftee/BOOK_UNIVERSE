@@ -32,7 +32,7 @@ const Login = () => {
         }
     };
     return (
-        <div className="h-screen lg:-ml-10 lg:-mt-10 flex justify-center items-center lg:gap-6 mx-4">
+        <div className="h-screen lg:-ml-20 lg:-mt-10 flex justify-center items-center lg:gap-6 mx-4">
             <Player
                 autoplay
                 loop

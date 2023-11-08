@@ -21,18 +21,17 @@ const NavBar = () => {
         navigate('/login')
     }
 
-    const [theme, setTheme] = useState(
-        localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
-    );
+    const [theme, setTheme] = useState("forest");
+
 
 
     const handleToggle = (e) => {
-        if (e.target.checked) {
-            setTheme("forest");
-        } else {
-            setTheme("light");
-        }
+        const newTheme = theme === "forest" ? "cupcake" : "forest";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+        document.querySelector("html").setAttribute("data-theme", newTheme);
     };
+
 
     useEffect(() => {
         localStorage.setItem("theme", theme);

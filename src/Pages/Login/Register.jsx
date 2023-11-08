@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
@@ -9,6 +9,7 @@ import json from '../../assets/json/reg.json';
 const Register = () => {
     const { createUser } = useContext(AuthContext)
     const navigate = useNavigate();
+    const location = useLocation();
     const handleSignUp = async (e) => {
         e.preventDefault()
         const email = e.target.email.value;
@@ -35,7 +36,7 @@ const Register = () => {
                 text: 'user created successfully',
             })
             console.log('user created successfully')
-            navigate("/");
+            navigate(location?.state ? location.state : '/');
         } catch (error) {
             Swal.fire({
                 icon: 'error',

@@ -6,6 +6,25 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Add this to your CSS */
+.book-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.book-container:hover .details {
+  visibility: visible;
+}
+
+.details {
+  position: absolute;
+  visibility: hidden;
+  transition: visibility 0.5s;
+}
+
+/* Add your other styles for details here */
+
 /* form{
   height: 520px;
   width: 430px;
@@ -109,42 +128,51 @@ button{
   transition-duration: 200ms;
   animation: button-pop var(--animation-btnn, 0.25s) ease-out;
 }
+
 .btnn-disabled,
-  .btnn[disabled],
-  .btnn:disabled {
+.btnn[disabled],
+.btnn:disabled {
   pointer-events: none;
 }
+
 .btnn-disabled,
-  .btnn[disabled],
-  .btnn:disabled {
+.btnn[disabled],
+.btnn:disabled {
   pointer-events: none;
 }
-.btnn-group > input[type="radio"].btnn {
+
+.btnn-group>input[type="radio"].btnn {
   appearance: none;
 }
-.btnn-group > input[type="radio"].btnn:before {
+
+.btnn-group>input[type="radio"].btnn:before {
   content: attr(data-title);
 }
+
 .btnn:is(input[type="checkbox"]),
 .btnn:is(input[type="radio"]) {
   width: auto;
   appearance: none;
 }
+
 .btnn:is(input[type="checkbox"]),
 .btnn:is(input[type="radio"]) {
   width: auto;
   appearance: none;
 }
+
 .btnn:is(input[type="checkbox"]):after,
 .btnn:is(input[type="radio"]):after {
   --tw-content: attr(aria-label);
   content: var(--tw-content);
 }
+
 .btnn:is(input[type="checkbox"]):after,
 .btnn:is(input[type="radio"]):after {
   --tw-content: attr(aria-label);
   content: var(--tw-content);
 }
+
 @media (hover: hover) {
   .btnn:hover {
     --tw-border-opacity: 1;
@@ -153,13 +181,16 @@ button{
     background-color: hsl(var(--b3) / var(--tw-bg-opacity));
   }
 }
+
 @media (hover: hover) {
   .btnn.glass:hover {
     --glass-opacity: 25%;
     --glass-border-opacity: 15%;
   }
 }
+
 @media (hover: hover) {
+
   .btnn-disabled:hover,
   .btnn[disabled]:hover,
   .btnn:disabled:hover {
@@ -170,7 +201,9 @@ button{
     --tw-text-opacity: 0.2;
   }
 }
+
 @media (hover: hover) {
+
   .btnn-disabled:hover,
   .btnn[disabled]:hover,
   .btnn:disabled:hover {
@@ -181,76 +214,91 @@ button{
     --tw-text-opacity: 0.2;
   }
 }
+
 @media (hover: hover) {
-  .btnn:is(input[type="checkbox"]:checked):hover, .btnn:is(input[type="radio"]:checked):hover {
+
+  .btnn:is(input[type="checkbox"]:checked):hover,
+  .btnn:is(input[type="radio"]:checked):hover {
     --tw-border-opacity: 1;
     border-color: hsl(var(--pf) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: hsl(var(--pf) / var(--tw-bg-opacity));
   }
 }
+
 @media (hover: hover) {
-  .btnn:is(input[type="checkbox"]:checked):hover, .btnn:is(input[type="radio"]:checked):hover {
+
+  .btnn:is(input[type="checkbox"]:checked):hover,
+  .btnn:is(input[type="radio"]:checked):hover {
     --tw-border-opacity: 1;
     border-color: hsl(var(--pf) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: hsl(var(--pf) / var(--tw-bg-opacity));
   }
 }
+
 .btnn:active:hover,
-  .btnn:active:focus {
+.btnn:active:focus {
   animation: button-pop 0s ease-out;
   transform: scale(var(--btnn-focus-scale, 0.97));
 }
+
 .btnn:active:hover,
-  .btnn:active:focus {
+.btnn:active:focus {
   animation: button-pop 0s ease-out;
   transform: scale(var(--btnn-focus-scale, 0.97));
 }
+
 .btnn:focus-visible {
   outline-style: solid;
   outline-width: 2px;
   outline-offset: 2px;
 }
+
 .btnn.glass {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   outline-color: currentColor;
 }
+
 .btnn.glass.btnn-active {
   --glass-opacity: 25%;
   --glass-border-opacity: 15%;
 }
+
 .btnn.btnn-disabled,
-  .btnn[disabled],
-  .btnn:disabled {
+.btnn[disabled],
+.btnn:disabled {
   --tw-border-opacity: 0;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.2;
   color: hsl(var(--bc) / var(--tw-text-opacity));
   --tw-text-opacity: 0.2;
 }
+
 .btnn.btnn-disabled,
-  .btnn[disabled],
-  .btnn:disabled {
+.btnn[disabled],
+.btnn:disabled {
   --tw-border-opacity: 0;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.2;
   color: hsl(var(--bc) / var(--tw-text-opacity));
   --tw-text-opacity: 0.2;
 }
+
 .btnn.btnn-disabled,
-  .btnn[disabled],
-  .btnn:disabled {
+.btnn[disabled],
+.btnn:disabled {
   --tw-border-opacity: 0;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.2;
   color: hsl(var(--bc) / var(--tw-text-opacity));
   --tw-text-opacity: 0.2;
 }
-.btnn-group > input[type="radio"]:checked.btnn,
-  .btnn-group > .btnn-active {
+
+.btnn-group>input[type="radio"]:checked.btnn,
+.btnn-group>.btnn-active {
   --tw-border-opacity: 1;
   border-color: hsl(var(--p) / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
@@ -258,11 +306,14 @@ button{
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
 }
-.btnn-group > input[type="radio"]:checked.btnn:focus-visible, .btnn-group > .btnn-active:focus-visible {
+
+.btnn-group>input[type="radio"]:checked.btnn:focus-visible,
+.btnn-group>.btnn-active:focus-visible {
   outline-style: solid;
   outline-width: 2px;
   outline-color: hsl(var(--p) / 1);
 }
+
 .btnn:is(input[type="checkbox"]:checked),
 .btnn:is(input[type="radio"]:checked) {
   --tw-border-opacity: 1;
@@ -272,6 +323,7 @@ button{
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
 }
+
 .btnn:is(input[type="checkbox"]:checked),
 .btnn:is(input[type="radio"]:checked) {
   --tw-border-opacity: 1;
@@ -281,63 +333,99 @@ button{
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
 }
-.btnn:is(input[type="checkbox"]:checked):focus-visible, .btnn:is(input[type="radio"]:checked):focus-visible {
+
+.btnn:is(input[type="checkbox"]:checked):focus-visible,
+.btnn:is(input[type="radio"]:checked):focus-visible {
   outline-color: hsl(var(--p) / 1);
 }
-.btnn:is(input[type="checkbox"]:checked):focus-visible, .btnn:is(input[type="radio"]:checked):focus-visible {
+
+.btnn:is(input[type="checkbox"]:checked):focus-visible,
+.btnn:is(input[type="radio"]:checked):focus-visible {
   outline-color: hsl(var(--p) / 1);
 }
+
 .btnn-group .btnn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+
 .btnn-group .btnn:first-child:not(:last-child) {
   margin-left: -1px;
   margin-top: -0px;
-  border-top-left-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-top-left-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
   border-top-right-radius: 0;
-  border-bottom-left-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-bottom-left-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
   border-bottom-right-radius: 0;
 }
+
 .btnn-group .btnn:last-child:not(:first-child) {
   border-top-left-radius: 0;
-  border-top-right-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-top-right-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-bottom-right-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
 }
+
 .btnn-group-horizontal .btnn:not(:first-child):not(:last-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+
 .btnn-group-horizontal .btnn:first-child:not(:last-child) {
   margin-left: -1px;
   margin-top: -0px;
-  border-top-left-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-top-left-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
   border-top-right-radius: 0;
-  border-bottom-left-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-bottom-left-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
   border-bottom-right-radius: 0;
 }
+
 .btnn-group-horizontal .btnn:last-child:not(:first-child) {
   border-top-left-radius: 0;
-  border-top-right-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-top-right-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-bottom-right-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
 }
+
 .btnn-group-vertical .btnn:first-child:not(:last-child) {
   margin-left: -0px;
   margin-top: -1px;
-  border-top-left-radius: var(--rounded-btnn, 0.5rem/* 8px */);
-  border-top-right-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-top-left-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
+  border-top-right-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+
 .btnn-group-vertical .btnn:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: var(--rounded-btnn, 0.5rem/* 8px */);
-  border-bottom-right-radius: var(--rounded-btnn, 0.5rem/* 8px */);
+  border-bottom-left-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
+  border-bottom-right-radius: var(--rounded-btnn, 0.5rem
+      /* 8px */
+    );
 }

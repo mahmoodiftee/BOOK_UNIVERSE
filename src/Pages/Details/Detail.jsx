@@ -20,7 +20,7 @@ const Detail = () => {
   const [SuggestedBook, setSuggestedBook] = useState([]);
   const [borrowedBooks, setBorrowedBooks] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:5000/books')
+    axios.get('https://library-management-system-server-khaki.vercel.app/books')
       .then((response) => {
         const data = response.data;
         const filteredBooks = data.filter((books) => books.category === Book.category);
@@ -34,7 +34,7 @@ const Detail = () => {
 
   useEffect(() => {
     if (user) {
-      axios.get(`http://localhost:5000/borrowedBooks?email=${user.email}`)
+      axios.get(`https://library-management-system-server-khaki.vercel.app/borrowedBooks?email=${user.email}`)
         .then((response) => {
           const data = response.data;
           setBorrowedBooks(data);
@@ -70,6 +70,7 @@ const Detail = () => {
       const ReturnDate = e.target.rDate.value;
       console.log(title, category, borrower, borrowerEmail, BorrowDate, ReturnDate);
       const borrowInfo = {
+        id: Book?._id || '',
         title: title,
         img: Book?.img || '',
         category: Book?.category || '',
@@ -79,23 +80,21 @@ const Detail = () => {
         return_date: ReturnDate || '',
       }
 
-      axios.post('http://localhost:5000/borrowedBooks', borrowInfo, {
+      axios.post('https://library-management-system-server-khaki.vercel.app/borrowedBooks', borrowInfo, {
         headers: {
           'Content-Type': 'application/json',
         },
       })
         .then((response) => {
           if (response.data.insertedId) {
-            const updatedQuantity = Book.quantity - 1; // Calculate the updated quantity
+            const updatedQuantity = Book.quantity - 1;
             axios
-              .patch(`http://localhost:5000/books/${Book._id}`, {
-                quantity: updatedQuantity, // Update the quantity
+              .patch(`https://library-management-system-server-khaki.vercel.app/books/${Book._id}`, {
+                quantity: updatedQuantity,
               })
               .then((updateResponse) => {
                 if (updateResponse.status === 200) {
-                  // Update the borrowedBooks state with the new borrowed book
                   setBorrowedBooks([...borrowedBooks, borrowInfo]);
-                  // Update the quantity in the Book object
                   Book.quantity = updatedQuantity;
 
                   Swal.fire({
@@ -165,12 +164,12 @@ const Detail = () => {
                 Borrow
               </button>
               {user && <Modal handleBorrow={handleBorrow} Book={Book} user={user}></Modal>}
-              <button
+              <Link
                 onClick={() => handleRead(Book._id)}
                 className="btn rounded-none btn-neutral lg:btn-wide flex justify-center items-center gap-2">
                 <GiRead className="h-6 w-6"></GiRead>
                 Read
-              </button>
+              </Link>
             </div>
 
           </div>
@@ -178,7 +177,7 @@ const Detail = () => {
       </div>
       <div className='mb-16'>
         <p className="text-sm text-center font-medium">Category:{Book.category}</p>
-        <p className="text-xl lg:text-2xl text-center mb-16 font-bold">You may also like</p>
+        <p className="text-xl lg:text-2xl text-center mb-8 lg:mb-16 font-bold">You may also like</p>
 
         <div>
           <div className='hidden lg:block'>

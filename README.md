@@ -1,8 +1,21 @@
-# React + Vite
+# Library Management System
+- Live Wbsite Link: https://book-universe-4b8f7.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Features
+# 1
+Book Universe is a Library Management System with a vast collection of books spanning different categories and authored by famous writers. Users have the option to borrow books by reserving them with a specified return date.
 
-Currently, two official plugins are available:
+# 2
+Private routing is implemented for all pages except the Home Page. To access these protected routes, users are required to log in, and Firebase authentication is employed to facilitate this.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 3
+Firebase authentication is utilized for user registration. After logging in, users' information can be found in the navigation bar.
+
+# 4
+On the "All Books" page, users can view a list of all available books. There's a button that allows users to filter and display only the available books or view all books.
+
+# 5
+Books from various categories are fetched from MongoDB, and newly added books are stored in the MongoDB database.
+
+# 6
+The "Borrowed Books" page displays all the books that users have borrowed by clicking the "Borrow" button on the book detail page, from there the user can return any book by clicking return button.

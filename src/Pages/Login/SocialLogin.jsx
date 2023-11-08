@@ -1,15 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from 'react-icons/fa';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const SocialLogin = () => {
 
-    const { googleLogin, githubLogin } = useContext(AuthContext)
+    const { googleLogin } = useContext(AuthContext)
     const navigate = useNavigate();
-
+    const location = useLocation();
     const handleLogin = (media) => {
         media()
             .then((res) => {
@@ -18,7 +17,7 @@ const SocialLogin = () => {
                     icon: 'success',
                     text: 'User signed in successfully',
                 });
-                navigate('/');
+                navigate(location?.state ? location.state : '/');
             })
             .catch((err) => {
                 console.log(err);

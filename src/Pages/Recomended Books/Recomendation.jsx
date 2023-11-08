@@ -10,13 +10,17 @@ import { Link } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating';
 const Recommendation = () => {
   const [books, setBooks] = useState([]);
-  const serverUrl = 'http://localhost:5000/recommendation';
+  const serverUrl = 'https://library-management-system-server-khaki.vercel.app/books';
+
   useEffect(() => {
     axios
       .get(serverUrl)
       .then((response) => {
         const data = response.data;
-        setBooks(data);
+        const filteredBooks = data.filter((book) => {
+          return book.category === 'Adventure' || book.category === 'Science Fiction';
+        });
+        setBooks(filteredBooks);
       })
       .catch((error) => {
         console.error(error);
@@ -83,11 +87,12 @@ const Recommendation = () => {
                 <div className='pl-1 mt-2 hidden lg:block'>
                   <h1 className='text-[15px] font-semibold'>{book.title}</h1>
                   <p className='text-[13px]'>Author:&nbsp;{book.author}</p>
-                  <p className="flex text-[13px]">Rating:&nbsp;<Rating
+                  <p className="flex text-[13px]">Rating:&nbsp;</p>
+                  <Rating
                     style={{ maxWidth: 70 }}
                     value={book.rating}
                     readOnly
-                  /></p>
+                  />
                   <Link to={`/${book._id}`}>
                     <button className="btn btn-sm btn-neutral rounded-none my-2">Read</button>
                   </Link>

@@ -24,7 +24,7 @@ const AddBook = () => {
       img,
     };
 
-    fetch('http://localhost:5000/books', {
+    fetch('https://library-management-system-server-khaki.vercel.app/books', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -70,13 +70,15 @@ const AddBook = () => {
           </div>
           <div className="flex flex-col lg:flex-row mb-4 gap-6 mx-auto">
             <div className="form-control">
-              <select name="category" defaultValue="Category" className="select font-medium p-2 rounded-lg input-bordered w-full lg:w-[228.8px] pr-16">
+              <select name="category" className="select text-[#8e949f] font-medium pl-4 text-[16px] p-2 rounded-full input-bordered w-full lg:w-[228.8px] pr-16" defaultValue="Select category">
+                <option value="Select category" disabled>Select category</option>
                 <option value="Fiction">Fiction</option>
                 <option value="Fantasy">Fantasy</option>
                 <option value="Horror">Horror</option>
                 <option value="Mystery">Mystery</option>
                 <option value="Adventure">Adventure</option>
                 <option value="Science Fiction">Science Fiction</option>
+                <option value="Sad">Sad</option>
               </select>
             </div>
             <div className="form-control">
