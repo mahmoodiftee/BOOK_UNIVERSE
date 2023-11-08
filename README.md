@@ -1,6 +1,7 @@
 # Library Management System
 - Live Wbsite Link: https://book-universe-4b8f7.web.app/
-
+#  Library and feature Used:
+ReactToPDF, Swiper JS, Axios interceptors for handling network requests.
 # Project Features
 # 1
 Book Universe is a Library Management System with a vast collection of books spanning different categories and authored by famous writers. Users have the option to borrow books by reserving them with a specified return date.
