@@ -3,7 +3,7 @@
 #  Technology Used:
 Tailwind css, React, Node.js, Express, MongoDB,DaisyUi, Firebase, React Hook Form,  ReactToPDF, Swiper JS, Axios.
 # Project Features
-- Book Universe is a Library Management System with a vast collection of books spanning different categories and authored by famous writers. Users have the option to borrow books by reserving them with a specified return date.
+Book Universe is a Library Management System with a vast collection of books spanning different categories and authored by famous writers. Users have the option to borrow books by reserving them with a specified return date.
 
 - Private routing is implemented for all pages except the Home Page. To access these protected routes, users are required to log in, and Firebase authentication is employed to facilitate this.
 
