@@ -1,7 +1,9 @@
 # Library Management System
 - Live Link: https://book-universe-4b8f7.web.app/
 #  Technology Used:
-Tailwind css, React, Node.js, Express, MongoDB,DaisyUi, Firebase, React Hook Form,  ReactToPDF, Swiper JS, Axios.
+[![Technology Used](https://skillicons.dev/icons?i=react,tailwind,nodejs,express,mongodb,firebase,)](https://skillicons.dev)
+- More library & pakages that have been used:
+Axios, DaisyUi, React Hook Form,  ReactToPDF, Swiper JS, Lottiefiles etc.
 # Project Features
 Book Universe is a Library Management System with a vast collection of books spanning different categories and authored by famous writers. Users have the option to borrow books by reserving them with a specified return date.
 
